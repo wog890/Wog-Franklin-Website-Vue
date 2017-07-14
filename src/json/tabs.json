@@ -1,0 +1,18 @@
+{
+	"tabs": [
+		{"type": "btn", "name": "Home"},
+		{"type": "menu", "name": "Departments", "content": [
+			{"name": "Archery"},
+			{"name": "Clothing"},
+			{"name": "Firearms"},
+			{"name": "Fishing"},
+			{"name": "Online Sales"},
+			{"name": "Repair"}
+		]},
+		{"type": "btn", "name": "New Products"},
+		{"type": "btn", "name": "Current Sales Ads"},
+		{"type": "btn", "name": "About"},
+		{"type": "btn", "name": "Contact"},
+		{"type": "btn", "name": "Admin"}
+	]
+}
