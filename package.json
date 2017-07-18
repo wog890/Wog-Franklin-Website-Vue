@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.3.4",
+    "vue-carousel": "^0.6.4",
     "vuetify": "^0.13.0"
   },
   "devDependencies": {
