@@ -9,7 +9,7 @@
 				products: [
 					{name: "Repair", brands: []}
 				],
-				srcs: '/src/imgs/.jpg'
+				srcs: '/src/imgs/repair.jpg'
 			}
 		}
 	}

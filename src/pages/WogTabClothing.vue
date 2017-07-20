@@ -11,7 +11,7 @@
 					{name: "Jackets", brands: []},
 					{name: "Hats", brands: []}
 				],
-				srcs: '/src/imgs/.jpg'
+				srcs: '/src/imgs/clothing1.jpg'
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 					<v-carousel-item src="/src/imgs/sotw-629.jpg" id="sotw"></v-carousel-item>
 					<v-carousel-item src="/src/imgs/ebaygun1.jpg" id="ebaygun1"></v-carousel-item>
 					<v-carousel-item src="/src/imgs/outside1.jpg" id="outside1"></v-carousel-item>
-					<v-carousel-item src="/src/imgs/ammowall.jpg" id="ammowall"></v-carousel-item>
+					<v-carousel-item src="/src/imgs/boots.jpg" id="boots"></v-carousel-item>
 				</v-carousel>
 			</v-flex>
 		</v-layout>

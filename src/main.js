@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Vuetify from 'vuetify'
-import VueCarousel from 'vue-carousel'
+import MaxFire from './maxapps/MaxFire.js'
+import SimData from './firebase_data.json'
 
 import WogCarousel from './components/WogCarousel.vue'
 import WogSlide from './components/WogSlide.vue'
@@ -24,8 +25,25 @@ import WogTabAbout from './pages/WogTabAbout.vue'
 import WogTabContact from './pages/WogTabContact.vue'
 import WogTabAdmin from './pages/WogTabAdmin.vue'
 
+const SIMULATE_FIREBASE = true;
+
+const FIREBASE_KEYS = {
+	apiKey: "AIzaSyAUI7-Dr2pxw1khiADQTTSlpwwEpvCnWvE",
+    authDomain: "wog-franklin-website.firebaseapp.com",
+    databaseURL: "https://wog-franklin-website.firebaseio.com",
+    projectId: "wog-franklin-website",
+    storageBucket: "wog-franklin-website.appspot.com",
+    messagingSenderId: "215362581628"
+};
+
+const SIM_DATA = {
+	delays: 1000,
+	data: SimData
+};
+
+MaxFire.init(SIMULATE_FIREBASE ? SIM_DATA : FIREBASE_KEYS);
+
 Vue.use(Vuetify);
-Vue.use(VueCarousel);
 
 Vue.component('wog-carousel', WogCarousel);
 Vue.component('wog-slide', WogSlide);
