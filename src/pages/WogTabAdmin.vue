@@ -1,12 +1,23 @@
 <template>
 	<div>
-		<wog-page :imgSrc="srcs"></wog-page>
-		<v-layout>
+		<wog-img-header :src="src.imgSrc"></wog-img-header>
+		<v-layout v-if="editable">
+			<v-flex md8 offset-md2 class="pl-3 pr-3">
+				<h3 class="text-xs-center secondary header">Admin Logout</h3>
+			</v-flex>
+		</v-layout>
+		<v-layout v-if="editable">
+			<v-flex md8 offset-md2 class="pl-3 pr-3 pb-3">
+				<wog-spinner v-if="loggingOut" :type="spinnerType"></wog-spinner>
+				<v-btn v-if="!loggingOut" primary @click.native="logOut">Log Out</v-btn>
+			</v-flex>
+		</v-layout>
+		<v-layout v-if="!editable">
 			<v-flex md8 offset-md2 class="pl-3 pr-3">
 				<h3 class="text-xs-center secondary header">Admin Login</h3>
 			</v-flex>
 		</v-layout>
-		<v-layout>
+		<v-layout v-if="!editable">
 			<v-flex md8 offset-md2 class="pl-3 pr-3 pb-3">
 				<v-layout>
 					<v-flex md2>
@@ -24,19 +35,17 @@
 						<v-text-field id="inpPass" v-model="password" label="required" single-line
 								:append-icon="passwordVisible ? 'visibility' : 'visibility_off'"
 								:append-icon-cb="() => (passwordVisible = !passwordVisible)"
-								:type="passwordVisible ? 'password' : 'text'">
+								:type="passwordVisible ? 'password' : 'text'"
+								@keyup.native.enter="logIn">
 						</v-text-field>
 					</v-flex>
 				</v-layout>
 				<v-layout>
 					<v-flex md10 offset-md2>
-						<v-alert success v-model="alertSuccess" transition="scale-transition">
-							Logged In.
-						</v-alert>
-						<v-alert error dismissible v-model="alertError" transition="scale-transition" @input="clearAlert">
-							{{errors}}
-						</v-alert>
-						<v-btn primary @click.native="logIn">Log In</v-btn>
+						<v-alert success v-model="alertSuccess" transition="scale-transition">Logged In.</v-alert>
+						<v-alert error dismissible v-model="alertError" transition="scale-transition" @input="clearAlert">{{alertErrorMessage}}</v-alert>
+						<wog-spinner v-if="loggingIn" :type="spinnerType"></wog-spinner>
+						<v-btn v-if="showLoginBtn" primary @click.native="logIn">Log In</v-btn>
 					</v-flex>
 				</v-layout>
 			</v-flex>
@@ -45,14 +54,21 @@
 </template>
 
 <script>
+	import * as FB from 'firebase'
+	import MaxFire from '../maxapps/MaxFire.js'
+
 	export default {
+		created() {
+			MaxFire.get('/tabs/admin').then(oProducts => {
+				this.src = oProducts
+				this.loading = false;
+			}).catch(oErr => {
+				this.loading = false;
+				this.errorMessage = 'Unable to load specials!';
+				console.log(oErr.message);
+			});
+		},
 		computed: {
-			alertError: function() {
-				if (this.errors == '' || !this.clickFlag) {
-					return false;
-				}
-				return true;
-			},
 			errors: function() {
 				var err = '';
 				var errs = [];
@@ -72,38 +88,62 @@
 					return 'Please provide a ' + err.slice(0, -1) + '.';
 				}
 				return '';
+			},
+			showLoginBtn: function() {
+				return this.errors == '' && !this.loggingIn;
 			}
 		},
 		data: function() {
 			return {
+				alertError: false,
+				alertErrorMessage: 'Username or password invalid.',
 				alertSuccess: false,
-				clickFlag: false,
+				loggingIn: false,
+				loggingOut: false,
 				password: '',
 				passwordVisible: true,
-				srcs: '/src/imgs/store.jpg',
+				spinnerType: 'pacman',
+				src: {imgSrc: {img: '', url: ''}},
 				username: ''
 			}
 		},
 		methods: {
 			clearAlert: function() {
+				this.alertError = false;
 				this.alertSuccess = false;
-				this.clickFlag = false;
 			},
 			clearForm: function() {
 				this.username = '';
 				this.password = '';
 			},
 			logIn: function() {
-				var self = this
+				var self = this;
 				if (this.errors == '') {
-					this.alertSuccess = true;
-					this.clickFlag = false;
-					setTimeout(this.clearAlert, 3000);
-					this.clearForm();
+					this.loggingIn = true;
+					FB.auth().signInWithEmailAndPassword(this.username, this.password).then(function(user) {
+						self.alertSuccess = true;
+						setTimeout(self.clearAlert, 3000);
+						self.clearForm();
+						self.loggingIn = false;
+					}).catch(function(error) {
+						self.alertError = true;
+						setTimeout(self.clearAlert, 3000);
+						self.loggingIn = false;
+					});
 				}
-				else {
-					this.clickFlag = true;
-				}
+			},
+			logOut: function() {
+				var self = this;
+				this.loggingOut = true;
+				FB.auth().signOut().then(function() {
+					self.loggingOut = false;
+				});
+			}
+		},
+		props: {
+			editable: {
+				type: Boolean,
+				default: false
 			}
 		}
 	}

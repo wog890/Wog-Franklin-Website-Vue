@@ -1,6 +1,6 @@
 import * as FB from 'firebase'
 
-const DEFAULT_DELAY = 3000;
+const	DEFAULT_DELAY = 3000;
 
 const _delayTypes = ['get', 'push', 'set', 'update'];
 

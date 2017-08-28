@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<wog-page :imgSrc="srcs"></wog-page>
+		<wog-img-header :src="src.imgSrc"></wog-img-header>
 		<v-layout>
 			<v-flex md8 offset-md2 class="pl-3 pr-3">
 				<h3 class="text-xs-center secondary header">Contact</h3>
-				<p class="subheading">For immediate inquiries, give us a call at <b>(706) 543-7803</b>. If you have a question after normal business hours, please fill out the form below and we will reply as soon as possible.</p>
+				<p class="subheading" v-html="src.text"></p>
 			</v-flex>
 		</v-layout>
 		<v-layout>
@@ -14,31 +14,32 @@
 						<p class="title text-xs-right pt-4 pb-0">Name:</p>
 					</v-flex>
 					<v-flex md10>
-						<v-text-field id="inpName" v-model="name" name="name" label="required" single-line></v-text-field>
+						<v-text-field class="mb-0" id="inpName" v-model="name" name="name" label="required" single-line></v-text-field>
 					</v-flex>
 				</v-layout>
 				<v-layout>
 					<v-flex md2>
-						<p class="title text-xs-right pt-4 pb-0">Email:</p>
+						<p class="title text-xs-right pt-2 pb-0">Email:</p>
 					</v-flex>
 					<v-flex md10>
-						<v-text-field id="inpEmail" v-model="email" name="email" label="required" single-line></v-text-field>
+						<v-text-field class="mt-0 mb-0" id="inpEmail" v-model="email" name="email" label="required" single-line></v-text-field>
 					</v-flex>
 				</v-layout>
 				<v-layout>
 					<v-flex md2>
-						<p class="title text-xs-right pt-4 pb-0">Questions, Comments, Concerns:</p>
+						<p class="title text-xs-right pt-2 pb-0">Questions, Comments, Concerns:</p>
 					</v-flex>
 					<v-flex md10>
-						<v-text-field id="inpQuestions" v-model="questions" name="questions" label="required" single-line multi-line></v-text-field>
+						<v-text-field class="mt-0 mb-0" id="inpQuestions" v-model="questions" name="questions" label="required"
+								single-line multi-line></v-text-field>
 					</v-flex>
 				</v-layout>
 				<v-layout>
 					<v-flex md2>
-						<p class="title text-xs-right pt-4 pb-0">Category:</p>
+						<p class="title text-xs-right pt-2 pb-0">Category:</p>
 					</v-flex>
 					<v-flex md10>
-						<v-select :items="select" v-model="category" label="Select One" segmented></v-select>
+						<v-select class="mt-0 mb-0" :items="select" v-model="category" label="Select One" segmented></v-select>
 					</v-flex>
 				</v-layout>
 				<v-layout>
@@ -58,7 +59,19 @@
 </template>
 
 <script>
+	import MaxFire from '../maxapps/MaxFire.js'
+
 	export default {
+		created() {
+			MaxFire.get('/tabs/contact').then(oProducts => {
+				this.src = oProducts
+				this.loading = false;
+			}).catch(oErr => {
+				this.loading = false;
+				this.errorMessage = 'Unable to load specials!';
+				console.log(oErr.message);
+			});
+		},
 		computed: {
 			alertError: function() {
 				if (this.errors == '' || !this.clickFlag) {
@@ -104,7 +117,7 @@
 				clickFlag: false,
 				name: "",
 				select: ["Availability of Items", "General Questions", "Questions on Pricing"],
-				srcs: '/src/imgs/franklin_swag.jpg',
+				src: {imgSrc: {img: '', url: ''}, text: ''},
 				questions: ""
 			}
 		},

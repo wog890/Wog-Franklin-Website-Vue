@@ -1,29 +1,38 @@
 <template>
 	<div>
 		<v-layout row wrap>
-			<v-flex md10 offset-md1 class="pl-3 pt-3 pr-3">
-				<h3 class="text-xs-center secondary header">Guns of the Week</h3>
-				<img class="responsive" src="/src/imgs/sotw-629.jpg">
-			</v-flex>
-			<v-flex md10 offset-md1 class="pl-3 pt-3 pr-3">
-				<h3 class="text-xs-center secondary header">Guns of the Month</h3>
-				<img class="responsive" src="/src/imgs/msa_july.jpg">
+			<v-flex v-for="(sale, i) in src.sales" :key="i" xs10 offset-xs1 class="pl-3 pt-3 pr-3">
+				<h3 class="text-xs-center secondary header">{{sale.name}}</h3>
+				<img class="responsive" :src="sale.imgSrc.url">
 			</v-flex>
 		</v-layout>
 	</div>
 </template>
 
 <script>
+	import MaxFire from '../maxapps/MaxFire.js'
+
 	export default {
-		data: function() {
+		created() {
+			MaxFire.get('/tabs/'+this.page).then(oSrcs => {
+				this.src = oSrcs;
+				this.loading = false;
+			}).catch(oErr => {
+				this.loading = false;
+				this.errorMessage = 'Unable to load page';
+				console.log(oErr);
+			});
+		},
+		data() {
 			return {
-				category: "",
-				email: "",
-				name: "",
-				select: ["Availability of Items", "General Questions", "Questions on Pricing"],
-				srcs: '/src/imgs/franklin_swag.jpg',
-				questions: ""
+				errorMessage: '',
+				loading: true,
+				page: 'salesAds',
+				src: {sales: []}
 			}
+		},
+		props: {
+			editable: {type: Boolean, default: false}
 		}
 	}
 </script>

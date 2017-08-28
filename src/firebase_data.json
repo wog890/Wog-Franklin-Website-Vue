@@ -1,3 +1,517 @@
 {
-	
+  "tabs" : {
+    "about" : {
+      "employees" : [ {
+        "imgSrc" : {
+          "img" : "imgs/employees/aaron.jpg",
+          "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Femployees%2Faaron.JPG?alt=media&token=e26ac416-be2a-4a5b-a435-87bae2c74682"
+        },
+        "name" : "Barbara Franklin",
+        "position" : "President"
+      }, {
+        "imgSrc" : {
+          "img" : "imgs/employees/nic.jpg",
+          "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Femployees%2Fnic.JPG?alt=media&token=8c57fe36-c9c5-4f07-9f34-01c957699d20"
+        },
+        "name" : "Mark Franklin",
+        "position" : "Vice-President"
+      } ],
+      "imgSrc" : {
+        "img" : "imgs/tabs/outside1.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Foutside1.jpg?alt=media&token=6c92adcc-ff25-4583-8d97-a155e12c6483"
+      },
+      "text" : "<h3 class=\"text-xs-center secondary header\">About</h3> \t\t\t\t<p class=\"subheading\"><b>Buy, Sell, Trade, Hunt, Fish, Shoot, its what we do.</b></p>  \t\t\t\t<p class=\"subheading\">Established in 1962, we are here for all of your outdoor and firearm needs. Our knowledgeable and friendly staff are here to help whether you are looking to get that trophy buck, record bass, or just need a nice set of sunglasses. We have you covered!</p> \t\t\t\t<p class=\"subheading\">We buy, sell, and trade firearms and related items. There is always someone on hand who can appraise your firearm or collection at all times. Whether you want to trade them, sell them, or are just curious about their value, swing on in and we'll help you out.</p>"
+    },
+    "admin" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/store.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fstore.JPG?alt=media&token=b6f66dd7-9a21-4998-89d7-d58b86fa2801"
+      }
+    },
+    "archery" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/archery.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Farchery.jpg?alt=media&token=2166455a-2463-41e5-86b5-ff130ce261f6"
+      },
+      "products" : [ {
+        "brands" : [ {
+          "name" : "Bowtech"
+        }, {
+          "name" : "Obsession"
+        }, {
+          "name" : "Parker"
+        }, {
+          "name" : "Prime"
+        }, {
+          "name" : "Xpedition"
+        } ],
+        "name" : "Bows"
+      }, {
+        "brands" : [ {
+          "name" : "Excalibur"
+        }, {
+          "name" : "Parker"
+        }, {
+          "name" : "Stryker"
+        } ],
+        "name" : "Crossbows"
+      }, {
+        "brands" : [ {
+          "name" : "B-Stinger"
+        }, {
+          "name" : "Dirt Nap"
+        }, {
+          "name" : "Easton"
+        }, {
+          "name" : "G5"
+        }, {
+          "name" : "GoldTip"
+        }, {
+          "name" : "QAD"
+        }, {
+          "name" : "Ram Cat"
+        }, {
+          "name" : "Rip Cord"
+        }, {
+          "name" : "Scott"
+        }, {
+          "name" : "Spot Hogg"
+        }, {
+          "name" : "Tight Spot"
+        }, {
+          "name" : "Trophy Taker"
+        }, {
+          "name" : "Vapor Trail"
+        }, {
+          "name" : "X Factor"
+        } ],
+        "name" : "Accessories"
+      } ],
+      "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Te ipsum, dignissimum maioribus tuis, voluptasne induxit, ut adolescentulus eriperes P. Quid enim est a Chrysippo praetermissum in Stoicis? Si alia sentit, inquam, alia loquitur, numquam intellegam quid sentiat; Duo Reges: constructio interrete. Nunc vides, quid faciat. Tu vero, inquam, ducas licet, si seq"
+    },
+    "clothing" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/clothing1.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fclothing1.jpg?alt=media&token=e732e475-8e88-4bc3-803f-5eb1b58699ec"
+      },
+      "products" : [ {
+        "name" : "Boots"
+      }, {
+        "name" : "Jackets"
+      }, {
+        "name" : "Hats"
+      } ],
+      "text" : "We have a fully stocked clothing located up the stairs to the right of our entrance. Check us out for boots, belts, jackets, hats, and all your other clothing needs."
+    },
+    "contact" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/franklin_swag.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Ffranklin_swag.jpg?alt=media&token=f88238a5-ea23-4a46-a481-9613e93b00f6"
+      },
+      "text" : "For immediate inquiries, give us a call at <b>(706) 543-7803</b>. If you have a question after normal business hours, please fill out the form below and we will reply as soon as possible."
+    },
+    "firearms" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/glock_zev_17.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fglock_zev_17.jpg?alt=media&token=3f4e9191-6476-4bdf-b0c6-6ed7b98f8ed6"
+      },
+      "products" : [ {
+        "brands" : [ {
+          "name" : "Armalite"
+        }, {
+          "name" : "ATI"
+        }, {
+          "name" : "Browning"
+        }, {
+          "name" : "Colt"
+        }, {
+          "name" : "CVA"
+        }, {
+          "name" : "CZ"
+        }, {
+          "name" : "Delton"
+        }, {
+          "name" : "DPMS"
+        }, {
+          "name" : "Henry",
+          "src" : "https://www.henryusa.com/henry-rifles-and-shotguns/"
+        }, {
+          "name" : "Hi-Point"
+        }, {
+          "name" : "Inland"
+        }, {
+          "name" : "Kel-Tec"
+        }, {
+          "name" : "Keystone Arms"
+        }, {
+          "name" : "Kimber",
+          "src" : "http://www.kimberamerica.com/rifles"
+        }, {
+          "name" : "Marlin"
+        }, {
+          "name" : "Mossberg",
+          "src" : "http://www.mossberg.com/firearms/rifles/"
+        }, {
+          "name" : "LWRC"
+        }, {
+          "name" : "PTR"
+        }, {
+          "name" : "PWS",
+          "src" : "https://primaryweapons.com/store/product-category/firearms/"
+        }, {
+          "name" : "Remington",
+          "src" : "https://www.remington.com/rifles"
+        }, {
+          "name" : "Rossi"
+        }, {
+          "name" : "Ruger",
+          "src" : "http://ruger.com/index.html"
+        }, {
+          "name" : "Savage"
+        }, {
+          "name" : "Smith & Wesson",
+          "src" : "https://www.smith-wesson.com/rifles"
+        }, {
+          "name" : "Tikka",
+          "src" : "http://www.tikka.fi/rifles"
+        }, {
+          "name" : "Thompson Center",
+          "src" : "https://www.tcarms.com/firearms/"
+        }, {
+          "name" : "Winchester"
+        } ],
+        "name" : "Rifles"
+      }, {
+        "brands" : [ {
+          "name" : "ATI"
+        }, {
+          "name" : "Benelli",
+          "src" : "http://www.benelliusa.com/shotguns"
+        }, {
+          "name" : "Beretta",
+          "src" : "http://www.beretta.com/en-us/shotguns/"
+        }, {
+          "name" : "Browning"
+        }, {
+          "name" : "Cimarron"
+        }, {
+          "name" : "CZ"
+        }, {
+          "name" : "F&N"
+        }, {
+          "name" : "Franchi",
+          "src" : "http://www.franchiusa.com/"
+        }, {
+          "name" : "H&R"
+        }, {
+          "name" : "Hatsan"
+        }, {
+          "name" : "Henry",
+          "src" : "https://www.henryusa.com/henry-rifles-and-shotguns/"
+        }, {
+          "name" : "Ithica"
+        }, {
+          "name" : "Iver Johnson"
+        }, {
+          "name" : "Kel-Tec"
+        }, {
+          "name" : "Mossberg",
+          "src" : "http://www.mossberg.com/shotguns"
+        }, {
+          "name" : "NEF"
+        }, {
+          "name" : "Remington",
+          "src" : "https://www.remington.com/shotguns"
+        }, {
+          "name" : "Stoeger"
+        }, {
+          "name" : "Winchester"
+        } ],
+        "name" : "Shotguns"
+      }, {
+        "brands" : [ {
+          "name" : "Beretta",
+          "src" : "http://www.beretta.com/en-us/pistols/?_ga=2.211910740.1945958181.1500030412-1638422340.1500030412"
+        }, {
+          "name" : "Canik",
+          "src" : "http://canikusa.com/"
+        }, {
+          "name" : "FMK",
+          "src" : "http://fmkfirearms.com/firearms/pistols/"
+        }, {
+          "name" : "Glock",
+          "src" : "https://us.glock.com/products/all"
+        }, {
+          "name" : "Heckler & Koch",
+          "src" : "http://hk-usa.com/product/pistols/"
+        }, {
+          "name" : "Heizer",
+          "src" : "https://heizerdefense.com/category/products/guns/"
+        }, {
+          "name" : "Iver Johnson",
+          "src" : "http://iverjohnsonarms.com/3001/index.html"
+        }, {
+          "name" : "Kimber",
+          "src" : "http://www.kimberamerica.com/pistols"
+        }, {
+          "name" : "Remington",
+          "src" : "https://www.remington.com/handguns"
+        }, {
+          "name" : "Ruger",
+          "src" : "http://ruger.com/index.html"
+        }, {
+          "name" : "Sig Sauer",
+          "src" : "https://www.sigsauer.com/products/firearms/pistols"
+        }, {
+          "name" : "Smith & Wesson",
+          "src" : "https://www.smith-wesson.com/"
+        }, {
+          "name" : "Springfield",
+          "src" : "http://www.springfield-armory.com/"
+        }, {
+          "name" : "Taurus",
+          "src" : "http://www.taurususa.com/"
+        } ],
+        "name" : "Handguns"
+      }, {
+        "brands" : [ {
+          "name" : "CVA"
+        }, {
+          "name" : "Thompson Center",
+          "src" : "https://www.tcarms.com/firearms/"
+        } ],
+        "name" : "Black Powder"
+      } ],
+      "text" : "I can edit a page's text on the fly! Like this. Try to make this <b>BOLD</b>."
+    },
+    "fishing" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/fishing.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Ffishing.jpg?alt=media&token=842d32ae-161a-4bc7-874c-4de5259ec29e"
+      },
+      "products" : [ {
+        "brands" : [ {
+          "name" : "Abu Garcia",
+          "src" : "http://www.abugarcia.com/"
+        }, {
+          "name" : "Berkley",
+          "src" : "http://www.berkley-fishing.com/"
+        }, {
+          "name" : "Bomber",
+          "src" : "http://www.bomberlures.com/"
+        }, {
+          "name" : "Booyah"
+        }, {
+          "name" : "Buckeye Lures"
+        }, {
+          "name" : "Creme",
+          "src" : "http://www.cremelure.com/"
+        }, {
+          "name" : "DBK Custom Lures"
+        }, {
+          "name" : "Daiwa",
+          "src" : "http://www.daiwa.com/"
+        }, {
+          "name" : "Driftmaster",
+          "src" : "http://www.driftmaster.com/"
+        }, {
+          "name" : "Duckett"
+        }, {
+          "name" : "Eagle Claw",
+          "src" : "https://www.eagleclaw.com/"
+        }, {
+          "name" : "Falcon",
+          "src" : "http://www.falconrods.com/"
+        }, {
+          "name" : "Gamakatsu",
+          "src" : "http://www.gamakatsu.com/"
+        }, {
+          "name" : "Hal Fly"
+        }, {
+          "name" : "Hilderbrandt"
+        }, {
+          "name" : "Koppers",
+          "src" : "http://www.livetargetlures.com/"
+        }, {
+          "name" : "Lucky Craft",
+          "src" : "http://www.luckycraft.com/luckycrafthome/default.htm"
+        }, {
+          "name" : "Mustad",
+          "src" : "http://www.mustad.no/"
+        }, {
+          "name" : "Net Bait"
+        }, {
+          "name" : "P-Line",
+          "src" : "http://www.p-line.com/"
+        }, {
+          "name" : "Penn",
+          "src" : "http://www.pennfishing.com/"
+        }, {
+          "name" : "PFlueger",
+          "src" : "http://www.pfluegerfishing.com/"
+        }, {
+          "name" : "Quantum",
+          "src" : "http://www.quantumfishing.com/"
+        }, {
+          "name" : "Rapala",
+          "src" : "http://www.rapala.com/"
+        }, {
+          "name" : "Rat-L-Trap",
+          "src" : "http://www.rat-l-trap.com/"
+        }, {
+          "name" : "Rebel Lures",
+          "src" : "http://www.rebellures.com/"
+        }, {
+          "name" : "Shakespearre",
+          "src" : "http://www.shakespeare-fishing.com/"
+        }, {
+          "name" : "Shimano",
+          "src" : "http://fish.shimano.com/"
+        }, {
+          "name" : "Smithwick",
+          "src" : "http://www.smithwicklures.com/"
+        }, {
+          "name" : "Snag Proof",
+          "src" : "https://www.snagproof.com/"
+        }, {
+          "name" : "Lews"
+        }, {
+          "name" : "Spro",
+          "src" : "http://www.spro.com/"
+        }, {
+          "name" : "Gambler"
+        }, {
+          "name" : "Stren",
+          "src" : "http://www.stren.com/"
+        }, {
+          "name" : "River 2 Sea"
+        }, {
+          "name" : "Wack-em"
+        }, {
+          "name" : "Wright & McGill",
+          "src" : "http://www.wright-mcgill.com/"
+        }, {
+          "name" : "Xcalibur"
+        }, {
+          "name" : "Zebco",
+          "src" : "http://www.zebco.com/"
+        }, {
+          "name" : "Zoom"
+        } ],
+        "name" : "Fishing"
+      } ],
+      "text" : "Say something about fishing..."
+    },
+    "home" : {
+      "articles" : [ {
+        "department" : "Firearms",
+        "header" : "Dove Season Sale",
+        "text" : "Dove season is almost here so swing by Franklin Gun Shop for all your shotgun needs. Shotguns, shotshells, and more all on sale starting Sunday the 27th."
+      }, {
+        "department" : "Archery",
+        "header" : "Prime Bows Now Available!",
+        "text" : "We are now proud dealers for Prime Bows! Swing by our archery department for information or help from our amazing bowtechs."
+      } ],
+      "slides" : [ {
+        "img" : "imgs/home/sotw.jpg",
+        "selected" : false,
+        "tabIndex" : "currentSalesAds",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Fhome%2Fsotw.jpg?alt=media&token=067d632d-4621-4429-af9c-589af75ca0be"
+      }, {
+        "img" : "imgs/home/ebaygun2.jpg",
+        "selected" : false,
+        "subIndex" : "depOnlineSales",
+        "tabIndex" : "departments",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Fhome%2Febaygun2.jpg?alt=media&token=b9a67d99-8fc3-4beb-99c9-823b332878aa"
+      }, {
+        "img" : "imgs/home/outside1.jpg",
+        "selected" : false,
+        "tabIndex" : "about",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Fhome%2Foutside1.jpg?alt=media&token=03d04057-efcd-40ba-921a-db55d606a27e"
+      }, {
+        "img" : "imgs/home/boots.jpg",
+        "selected" : false,
+        "subIndex" : "depClothing",
+        "tabIndex" : "departments",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Fhome%2Fboots.jpg?alt=media&token=b3805715-3244-4398-9354-1351683b380e"
+      } ]
+    },
+    "newProducts" : {
+      "disclaimer" : "We purchase used and new products every day. Check here to see what used inventory has come in recently. Inventory is not guaranteed after posting, please call us at <b>(706) 543-7803</b> to check availability.",
+      "imgSrc" : {
+        "img" : "imgs/tabs/ars.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fars.JPG?alt=media&token=8e2357d9-eab8-4f51-923c-cdc981cf6590"
+      },
+      "products" : [ {
+        "caliber" : "20ga",
+        "date" : "08/27/17",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ffirearms%2F17070157.jpg?alt=media&token=a6f359a5-581b-4992-b7a9-edd5c98f3dc4",
+        "name" : "ATA Venza",
+        "price" : 399.99,
+        "stock" : 17070157,
+        "type" : "Shotgun"
+      }, {
+        "caliber" : "40cal",
+        "date" : "08/26/17",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ffirearms%2F17070158.jpg?alt=media&token=129cf424-1ac1-469c-8d3e-b5d788643fe0",
+        "name" : "Glock 22",
+        "price" : 349.99,
+        "stock" : 17070158,
+        "type" : "Pistol"
+      }, {
+        "caliber" : "380acp",
+        "date" : "08/20/17",
+        "img" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ffirearms%2F17020551.jpg?alt=media&token=e482f0ea-b24b-4f68-9342-91e8de0d72ef",
+        "name" : "HiPoint JCP",
+        "price" : 149.99,
+        "stock" : 17020551,
+        "type" : "Pistol"
+      } ]
+    },
+    "onlineSales" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/ebaygun1.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Febaygun1.jpg?alt=media&token=47850fba-e9bc-45b1-ba08-9c4b648ed4ad"
+      },
+      "products" : [ {
+        "brands" : [ {
+          "name" : "Franklin's eBay",
+          "src" : "https://www.ebay.com/sch/franklin_gun/m.html?_dmd=1&_ipg=50&_sop=12&_rdc=1"
+        } ],
+        "name" : "eBay"
+      }, {
+        "brands" : [ {
+          "name" : "Franklin's Gunbroker",
+          "src" : "http://www.gunbroker.com/All/BI.aspx?Sort=13&IncludeSellers=826438&PageSize=30"
+        } ],
+        "name" : "Gunbroker"
+      } ],
+      "text" : "We list many of our products online. Check out the links below for many of our online deals!"
+    },
+    "repair" : {
+      "imgSrc" : {
+        "img" : "imgs/tabs/repair.jpg",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Frepair.jpg?alt=media&token=1f7c560d-ea25-423e-b66a-09542f219d29"
+      },
+      "products" : [ {
+        "name" : "Repair"
+      } ],
+      "text" : "If you need firearm repaired, cleaned, or touched up bring them to our experienced gunsmiths. Gunsmith hours are 9:00 to 5:00 Monday through Saturday, but firearms can be dropped off at any time! If you have any questions on what we can work on or pricing call us at <b>(706) 543-7803</b> and ask for <b>repair</b>."
+    },
+    "salesAds" : {
+      "sales" : [ {
+        "imgSrc" : {
+          "img" : "imgs/tabs/sotw.jpg",
+          "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fsotw.jpg?alt=media&token=ef650f5f-3357-4483-9cb1-fbb23fbd50a9"
+        },
+        "name" : "Guns of the Week"
+      }, {
+        "imgSrc" : {
+          "img" : "imgs/tabs/sotm.jpg",
+          "url" : "https://firebasestorage.googleapis.com/v0/b/wog-franklin-website.appspot.com/o/imgs%2Ftabs%2Fsotm.jpg?alt=media&token=ecf095aa-adf3-4b1a-9453-28b34471dd7d"
+        },
+        "name" : "Guns of the Month"
+      } ]
+    }
+  }
 }
